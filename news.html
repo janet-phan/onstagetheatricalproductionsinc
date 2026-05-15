@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Gallery - On Stage Theatrical Productions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="top-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo-link">
+                <img src="images/onstage_logo_transparent.png" alt="On Stage Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="programs.html">PROGRAMS & CLASSES</a></li>
+                <li><a href="shows.html">SHOWS & TICKETS</a></li>
+                <li><a href="costumes.html">COSTUME RENTALS</a></li>
+                <li><a href="news.html">NEWS & GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header text-center" style="background: white; padding: 60px 0 20px 0;">
+        <div class="container">
+            <h1 style="color: #1E1E1E;">NEWS & GALLERY</h1>
+        </div>
+    </section>
+
+    <!-- BEHIND THE SCENES -->
+    <section class="behind-the-scenes-section bg-light-blue" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="text-center mb-40" style="color: var(--primary-pink); font-size: 2.5rem;">BEHIND THE SCENES</h2>
+            <div class="bts-grid">
+                <div class="bts-card text-center">
+                    <p class="font-bold mb-10" style="color: white; text-transform: uppercase;">LOREM IPSUM</p>
+                    <a href="#"><img src="https://picsum.photos/seed/bts1/400/400" alt="Behind the scenes"></a>
+                </div>
+                <div class="bts-card text-center">
+                    <p class="font-bold mb-10" style="color: white; text-transform: uppercase;">LOREM IPSUM</p>
+                    <a href="#"><img src="https://picsum.photos/seed/bts2/400/400" alt="Behind the scenes"></a>
+                </div>
+                <div class="bts-card text-center">
+                    <p class="font-bold mb-10" style="color: white; text-transform: uppercase;">LOREM IPSUM</p>
+                    <a href="#"><img src="https://picsum.photos/seed/bts3/400/400" alt="Behind the scenes"></a>
+                </div>
+                <div class="bts-card text-center">
+                    <p class="font-bold mb-10" style="color: white; text-transform: uppercase;">LOREM IPSUM</p>
+                    <a href="#"><img src="https://picsum.photos/seed/bts4/400/400" alt="Behind the scenes"></a>
+                </div>
+                <div class="bts-card text-center">
+                    <p class="font-bold mb-10" style="color: white; text-transform: uppercase;">LOREM IPSUM</p>
+                    <a href="#"><img src="https://picsum.photos/seed/bts5/400/400" alt="Behind the scenes"></a>
+                </div>
+                <div class="bts-card text-center">
+                    <p class="font-bold mb-10" style="color: white; text-transform: uppercase;">LOREM IPSUM</p>
+                    <a href="#"><img src="https://picsum.photos/seed/bts6/400/400" alt="Behind the scenes"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT SPOTLIGHTS -->
+    <section class="student-spotlights-section" style="padding: 60px 0; background: white;">
+        <div class="container">
+            <h2 class="text-center mb-40" style="color: var(--primary-pink); font-size: 2.5rem;">STUDENT SPOTLIGHTS</h2>
+            <div class="spotlight-grid">
+                <!-- 8 Spotlights -->
+                <script>
+                    const spotlightHTML = `
+                        <div class="spotlight-card text-center">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Student Spotlight" class="spotlight-img">
+                            <h3 class="mt-15" style="color: var(--primary-green); text-transform: uppercase;">LOREM IPSUM</h3>
+                            <div class="spotlight-text-container mt-10">
+                                <p class="spotlight-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus quam ut pellentesque dictum. Duis aliquam ipsum pulvinar mauris volutpat fringilla. Cras dolor justo, pharetra vel blandit id, lobortis id purus. Nulla facilisi. Sed malesuada, ante nec euismod sagittis, felis ipsum cursus velit, id bibendum tellus orci id nunc. Phasellus tincidunt, turpis at viverra tempus, magna neque tristique lectus, at feugiat nisi diam vel risus. Nullam in ex eu dui sagittis volutpat. Aenean non lectus nulla. Sed sed accumsan dolor.</p>
+                            </div>
+                            <button class="read-more-btn mt-10" onclick="toggleSpotlight(this)" style="background:none; border:none; color: var(--primary-blue); font-weight: bold; cursor: pointer;">Read More</button>
+                        </div>
+                    `;
+                    document.write(spotlightHTML.repeat(8));
+
+                    // Modal HTML injection
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const modalHTML = `
+                            <div id="spotlightModal" class="spotlight-modal" style="display: none;">
+                                <div class="spotlight-modal-content">
+                                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                                    <img id="modalImg" src="" alt="Student Spotlight" class="spotlight-img mb-15">
+                                    <h3 id="modalName" style="color: var(--primary-green); text-transform: uppercase; margin-bottom: 15px; text-align: center;"></h3>
+                                    <p id="modalText" style="color: #1E1E1E; text-align: left;"></p>
+                                </div>
+                            </div>
+                        `;
+                        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+                        window.onclick = function (event) {
+                            const modal = document.getElementById('spotlightModal');
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    });
+
+                    function toggleSpotlight(btn) {
+                        const container = btn.parentElement;
+                        const img = container.querySelector('img').src;
+                        const name = container.querySelector('h3').innerText;
+                        const text = container.querySelector('.spotlight-text').innerText;
+
+                        document.getElementById('modalImg').src = img;
+                        document.getElementById('modalName').innerText = name;
+                        document.getElementById('modalText').innerText = text;
+
+                        document.getElementById('spotlightModal').style.display = 'flex';
+                    }
+
+                    function closeModal() {
+                        document.getElementById('spotlightModal').style.display = 'none';
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOW UPDATES -->
+    <section class="show-updates-section bg-light-gray" style="padding: 60px 0;">
+        <div class="container" style="max-width: 900px;">
+            <h2 class="text-center mb-40" style="color: var(--primary-pink); font-size: 2.5rem;">SHOW UPDATES</h2>
+            <div class="updates-list">
+                <script>
+                    const updateHTML = `
+                        <div class="update-row">
+                            <div class="update-img-col">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Show Update">
+                            </div>
+                            <div class="update-text-col">
+                                <h3 style="color: var(--primary-green); text-transform: uppercase; margin-bottom: 10px;">LOREM IPSUM</h3>
+                                <p style="color: #1E1E1E;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus quam ut pellentesque dictum. Duis aliquam ipsum pulvinar mauris volutpat fringilla. Cras dolor justo, pharetra vel blandit id, lobortis id purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    `;
+                    document.write(updateHTML.repeat(3));
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANNOUNCEMENTS -->
+    <section class="announcements-section" style="background-color: var(--primary-pink); padding: 60px 0;">
+        <div class="container">
+            <h2 class="text-center mb-40" style="color: white; font-size: 2.5rem;">ANNOUNCEMENTS</h2>
+            <div class="announcements-grid">
+                <script>
+                    const announcementHTML = `
+                        <div class="announcement-card" style="background: white; border-radius: 5px; overflow: hidden; display: flex; flex-direction: column;">
+                            <img src="https://picsum.photos/seed/bts2/400/400" alt="Announcement" style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="announcement-content" style="padding: 20px; flex: 1; display: flex; flex-direction: column; text-align: left;">
+                                <p class="announcement-text line-clamp-10" style="margin-bottom: 15px; flex: 1;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus quam ut pellentesque dictum. Duis aliquam ipsum pulvinar mauris volutpat fringilla. Cras dolor justo, pharetra vel blandit id, lobortis id purus. Proin consequat, tellus non egestas euismod, odio lacus tristique est, a venenatis ipsum sem sed justo. Sed et sapien eget quam fermentum congue vel a ex. Integer pretium justo ac est tincidunt pretium. Aliquam id tellus in erat iaculis hendrerit. Phasellus sollicitudin dui sit amet urna gravida. Sed in enim ipsum.</p>
+                                <a href="#" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">Read More</a>
+                            </div>
+                        </div>
+                    `;
+                    document.write(announcementHTML.repeat(3));
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="photo-gallery-section" style="padding: 60px 0; background: white;">
+        <div class="container">
+            <h2 class="text-center mb-40" style="color: var(--primary-pink); font-size: 2.5rem;">PHOTO GALLERY</h2>
+            <div class="gallery-grid-new">
+                <script>
+                    const galleryImages = [
+                        "1507676184212-d0330a15233c", "1478720568477-152d9b164e26", "1514365313628-9173eb0e31c2",
+                        "1516450360452-9312f5e86fc7", "1503095396549-807759245b35", "1524594152303-9fd13543fe6e",
+                        "1533512965009-40eb24dcc095", "1518908336710-4e1cf821d3d1", "1543886574-0f33d7d79bce"
+                    ];
+                    galleryImages.forEach(img => {
+                        document.write(`
+                            <div class="gallery-item-new">
+                                <img src="https://images.unsplash.com/photo-${img}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery Photo">
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO HIGHLIGHTS -->
+    <section class="video-highlights-section" style="padding: 60px 0; background: white;">
+        <div class="container">
+            <h2 class="text-center mb-40" style="color: var(--primary-pink); font-size: 2.5rem;">VIDEO HIGHLIGHTS</h2>
+            <div class="video-grid">
+                <script>
+                    const videoHTML = `
+                        <div class="video-card">
+                            <img src="https://images.unsplash.com/photo-1540822607172-10f8450f7572?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Highlight">
+                            <div class="play-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                    `;
+                    document.write(videoHTML.repeat(6));
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-light-blue">
+        <div class="container footer-content">
+            <div class="footer-logo-col">
+                <img src="images/onstage_logo_transparent.png" alt="On Stage Logo" class="footer-logo">
+            </div>
+            <div class="footer-info-col">
+                <div class="info-block">
+                    <h4>Location</h4>
+                    <p>3770 N Main St<br>Fall River, MA 02720<br>(508) 673-4880</p>
+                </div>
+                <div class="info-block">
+                    <h4>Email Us</h4>
+                    <p>LindaOnStage@AOL.com</p>
+                </div>
+            </div>
+            <div class="footer-social-col">
+                <p class="social-header">Socials</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 OnStage Theatrical Productions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
