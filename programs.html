@@ -262,19 +262,57 @@
     <!-- Lightbox -->
     <dialog id="imageModal" class="lightbox-dialog">
         <button class="close-lightbox" onclick="document.getElementById('imageModal').close()">&times;</button>
+        <button class="lightbox-btn prev-btn" onclick="navigateLightbox(-1)" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
         <img id="lightboxImage" src="" alt="Popup Preview">
+        <button class="lightbox-btn next-btn" onclick="navigateLightbox(1)" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
     </dialog>
 
     <script>
+        let currentImagesList = [];
+        let currentImageIndex = -1;
+
         function openLightbox(src) {
-            document.getElementById('lightboxImage').src = src;
+            const decodedSrc = decodeURIComponent(src);
+            
+            // Gather all images in the .summer-camps-grid
+            const container = document.querySelector('.summer-camps-grid');
+            if (container) {
+                currentImagesList = Array.from(container.querySelectorAll('img')).map(img => img.getAttribute('src'));
+                currentImageIndex = currentImagesList.findIndex(imgSrc => decodeURIComponent(imgSrc) === decodedSrc);
+            }
+            
+            updateLightboxImage();
             document.getElementById('imageModal').showModal();
+        }
+
+        function updateLightboxImage() {
+            if (currentImageIndex >= 0 && currentImageIndex < currentImagesList.length) {
+                document.getElementById('lightboxImage').src = currentImagesList[currentImageIndex];
+            }
+        }
+
+        function navigateLightbox(direction) {
+            if (currentImagesList.length === 0) return;
+            currentImageIndex = (currentImageIndex + direction + currentImagesList.length) % currentImagesList.length;
+            updateLightboxImage();
         }
         
         // Close modal when clicking outside the image
         document.getElementById('imageModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 this.close();
+            }
+        });
+
+        // Enable keyboard left/right arrow navigation
+        document.addEventListener('keydown', function(e) {
+            const modal = document.getElementById('imageModal');
+            if (modal && modal.open) {
+                if (e.key === 'ArrowRight') {
+                    navigateLightbox(1);
+                } else if (e.key === 'ArrowLeft') {
+                    navigateLightbox(-1);
+                }
             }
         });
     </script>
