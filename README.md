@@ -8,7 +8,7 @@ This prototype is built with clean vanilla HTML5, CSS3, and lightweight JavaScri
 
 ## 📂 Page Inventory & Mapping
 
-- **[index.html](index.html) (Home Page):** Contains the hero banner, current production highlights, explore programs grid, upcoming shows list, costume rentals teaser banner, "Behind the Scenes" gallery, and success statistics.
+- **[index.html](index.html) (Home Page):** Contains the hero banner, current production highlights, explore programs grid (updated from a 2x2 layout to a single row of 4 columns on desktop), upcoming shows list, costume rentals teaser banner, "Behind the Scenes" gallery, and success statistics.
 - **[about.html](about.html) (About Us):** Outlines the studio's mission, vision, and leadership/staff biography cards.
 - **[programs.html](programs.html) (Programs & Classes):** Details the classes offered, camp information, registration details, and program FAQs.
 - **[shows.html](shows.html) (Shows & Tickets):** Contains the upcoming production calendars, direct ticketing links, and historical production logs.
