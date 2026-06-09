@@ -2191,7 +2191,8 @@ h4 {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.9;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .btn-white-purple {
