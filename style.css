@@ -892,6 +892,14 @@ h4 {
         align-items: center;
     }
 
+    .footer-logo-col {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        margin-right: 0;
+    }
+
     .social-icons {
         justify-content: center;
     }
