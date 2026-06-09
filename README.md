@@ -14,7 +14,7 @@ This prototype is built with clean vanilla HTML5, CSS3, and lightweight JavaScri
 - **[shows.html](shows.html) (Shows & Tickets):** Contains the upcoming production calendars, direct ticketing links, and historical production logs.
 - **[costumes.html](costumes.html) (Costume Rentals Hub):** Displays overview info for school/theater rentals, links to rental documents, FAQs, and a grid of costume categories.
 - **[christmas-carol-costumes.html](christmas-carol-costumes.html) (A Christmas Carol Costume Gallery):** A detailed gallery page showing the Victorian costume collection for *A Christmas Carol*. 
-- **[news.html](news.html) (News & Gallery):** Contains sections for "Behind the Scenes" snapshots, Student Spotlights with collapsible text, updates, announcements, and video highlight grids.
+- **[gallery.html](gallery.html) (Photo Gallery):** Contains Behind the Scenes gallery, Parent Testimonials, Previous Show Galleries, and video highlight grids.
 
 ---
 
@@ -39,9 +39,9 @@ This prototype is built with clean vanilla HTML5, CSS3, and lightweight JavaScri
 - **Static implementation:** The "Summer Camps" page, news galleries, homepage "Behind the Scenes", and the "A Christmas Carol" page use a custom HTML5 `<dialog>` component with JavaScript to show popup pictures and enable left/right arrow and keyboard navigation.
 - **WordPress Translation:** Instead of recreating custom JS, you can use WordPress gallery plugins (such as **Envira Gallery**, **FooGallery**, or native Gutenberg/Elementor gallery blocks with a lightbox add-on) to build these pages. This makes it easier for admin users to add/remove photos in the future.
 
-### 3. Student Spotlights
-- **Static implementation:** The student spotlights in [news.html](news.html) dynamically repeat using JavaScript and support a "Read More" modal.
-- **WordPress Translation:** You can represent these by setting up a **Custom Post Type (CPT)** for "Spotlights" in WordPress (using plugins like *Custom Post Type UI* or writing it in PHP). This allows Linda/staff to easily add new spotlights in the WordPress dashboard without editing code.
+### 3. Parent Testimonials & Galleries
+- **Static implementation:** The testimonials and previous show galleries are rendered in static layout structures.
+- **WordPress Translation:** You can represent testimonials by setting up custom blocks or custom widgets, making it easy for staff to update parent quotes.
 
 ### 4. Custom Styling
 - All custom designs, alignments, grids, and responsive behaviors are stored in [style.css](style.css). This file can be used as the base stylesheet (`style.css`) for a custom WordPress theme.

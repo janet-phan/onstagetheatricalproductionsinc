@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships - On Stage Theatrical Productions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="top-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo-link">
+                <img src="images/onstage_logo_transparent.png" alt="On Stage Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="programs.html">PROGRAMS & CLASSES</a></li>
+                <li><a href="shows.html">SHOWS & TICKETS</a></li>
+                <li><a href="scholarship.html">SCHOLARSHIPS</a></li>
+                <li><a href="costumes.html">COSTUME RENTALS</a></li>
+                <li><a href="gallery.html">PHOTO GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="pink-text">SCHOLARSHIP PROGRAM</h1>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="scholarship-intro bg-light-gray">
+        <div class="container">
+            <div class="scholarship-grid">
+                <div class="scholarship-text">
+                    <h2 class="pink-text">GIVE KIDS A CHANCE</h2>
+                    <p class="subtitle" style="margin-bottom: 20px; font-weight: bold; color: var(--primary-purple);">
+                        Sponsored by On Stage Theatrical Productions, Inc.
+                    </p>
+                    <p>
+                        <strong>Give Kids A Chance</strong> is a scholarship program created to provide underserved youth of the City of Fall River with the opportunity to participate in quality performing arts education through On Stage Theatrical Productions, Inc.
+                    </p>
+                    <p>
+                        The program is designed to introduce children to the arts in a positive, structured, and educational environment where they can grow in confidence, creativity, teamwork, discipline, and self-expression through dance and performance opportunities.
+                    </p>
+                </div>
+                <div class="scholarship-image">
+                    <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Give Kids A Chance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLICIES & EXPECTATIONS -->
+    <section class="policies-section">
+        <div class="container">
+            <div class="policy-card">
+                <h2>Trial Period & Policies</h2>
+                <p>
+                    Students accepted into the scholarship program will begin with a <strong>six-week trial period</strong>. During this time, students and families are expected to follow all studio policies and procedures, including:
+                </p>
+                <ul class="policy-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Arriving for class and pick-up on time</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Respectful behavior in the studio and lobby areas</li>
+                    <li><i class="fa-solid fa-circle-check"></i> No horseplay or disruptive behavior</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Proper dress code and clean uniform each week</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Hair neatly secured in a ballet bun for class</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Practicing at home and arriving prepared each week</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Showing respect toward teachers, staff, fellow students, and studio property</li>
+                </ul>
+                <p style="margin-top: 30px; font-size: 1rem; line-height: 1.6; color: #555;">
+                    At the conclusion of each six-week session, the Board of Directors will review student participation, attendance, effort, behavior, and family cooperation to determine continued scholarship eligibility for the following session.
+                </p>
+                <p style="font-weight: 700; color: var(--primary-purple); margin-top: 15px;">
+                    * Scholarship assistance is based on financial need and program availability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELIGIBILITY INDICATORS -->
+    <section class="eligibility-section bg-light-blue">
+        <div class="container">
+            <div class="eligibility-card">
+                <h2 class="pink-text">ELIGIBILITY INDICATORS</h2>
+                <p>Please review the indicators below. Check all that apply to see if your household meets the criteria for the program:</p>
+                
+                <form id="eligibilityForm" onsubmit="event.preventDefault();">
+                    <div class="indicators-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="free-lunch">
+                            <span>Free/Reduced Lunch</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="snap-ebt">
+                            <span>SNAP/EBT Assistance</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="medicaid">
+                            <span>MassHealth/Medicaid</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="single-parent">
+                            <span>Single Parent Household</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="hardship">
+                            <span>Financial Hardship</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="foster">
+                            <span>Foster Care / Guardianship / Adopted</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="eligibility" value="referred">
+                            <span>Referred by School or Community Program</span>
+                        </label>
+                    </div>
+
+                    <div class="app-cta-box">
+                        <h3>Online Application Coming Soon!</h3>
+                        <p>We are currently setting up our digital application form. In the meantime, you can reach out to us directly to ask about program availability or request a paper application.</p>
+                        <a href="mailto:LindaOnStage@AOL.com?subject=Give%20Kids%20A%20Chance%20Scholarship%20Inquiry" class="btn-white-purple">Email Inquiry</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOUTH COAST INVITATIONAL SCHOLARSHIP -->
+    <section class="sci-scholarship-section bg-light-gray" style="padding: 60px 0; border-top: 1px solid #ddd;">
+        <div class="container">
+            <h2 class="pink-text text-center mb-10">South Coast Invitational College Scholarship Program</h2>
+            <p class="subtitle text-center mb-40" style="color: var(--primary-purple); max-width: 800px; margin: 0 auto 30px; text-transform: none; font-size: 1.15rem;">
+                South Coast Invitational is honored to support the next generation of performers as they continue their educational and artistic journeys.
+            </p>
+            
+            <div class="sci-grid">
+                <div class="sci-column" style="border-top: 5px solid var(--primary-pink);">
+                    <h3 class="purple-text mb-20" style="color: var(--primary-purple); font-size: 1.4rem; font-weight: 700; text-transform: uppercase;">Scholarship Eligibility Requirements</h3>
+                    <ol style="color: #333; margin-left: 20px;">
+                        <li>Applicants must be graduating high school seniors from the Class of 2027.</li>
+                        <li>Scholarship funds must be applied toward attendance at an accredited college, university, or educational program.</li>
+                        <li>Scholarship payments will be issued directly to the college or educational institution selected by the recipient.</li>
+                        <li>
+                            Participating studios must have a minimum of:
+                            <ul style="list-style-type: disc; margin-left: 25px; margin-top: 5px; margin-bottom: 5px;">
+                                <li>15 student competitors</li>
+                                <li>15 competition entries</li>
+                            </ul>
+                            in order to qualify for scholarship participation.
+                        </li>
+                        <li>South Coast Invitational accepts a maximum of five studios per season in order to maintain a positive, organized, and personalized competition experience.</li>
+                    </ol>
+                </div>
+                
+                <div class="sci-column" style="border-top: 5px solid var(--primary-green);">
+                    <h3 class="green-text mb-20" style="color: #27c156; font-size: 1.4rem; font-weight: 700; text-transform: uppercase;">Scholarship Application Process</h3>
+                    <ol style="color: #333; margin-left: 20px;">
+                        <li>
+                            <strong>Complete the Scholarship Application</strong><br>
+                            Graduating seniors must complete and submit the official South Coast Invitational Scholarship Application Form.
+                        </li>
+                        <li>
+                            <strong>Submission Deadline</strong><br>
+                            All completed scholarship applications must be submitted by: <strong style="color: var(--primary-pink);">March 15, 2027</strong>.
+                        </li>
+                        <li>
+                            <strong>Performance Requirements</strong><br>
+                            Graduating seniors are not required to perform a solo to be considered for the scholarship. Judges will be notified of all competition routines in which scholarship applicants are participating.
+                        </li>
+                    </ol>
+                    <p style="margin-top: 25px; font-weight: bold; text-align: center; color: var(--primary-purple);">
+                        We look forward to celebrating the achievements, dedication, and passion of our talented students.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-light-blue">
+        <div class="container footer-content">
+            <div class="footer-logo-col">
+                <img src="images/onstage_logo_transparent.png" alt="On Stage Logo" class="footer-logo">
+            </div>
+            <div class="footer-info-col">
+                <div class="info-block">
+                    <h4>Location</h4>
+                    <p>3770 N Main St<br>Fall River, MA 02720<br>(508) 673-4880</p>
+                </div>
+                <div class="info-block">
+                    <h4>Email Us</h4>
+                    <p>LindaOnStage@AOL.com</p>
+                </div>
+            </div>
+            <div class="footer-social-col">
+                <p class="social-header">Socials</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/OnStageTheatricalProductionsInc"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 OnStage Theatrical Productions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
